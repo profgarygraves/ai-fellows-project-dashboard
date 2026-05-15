@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-15T23:08:48.270Z",
+  "generatedAt": "2026-05-15T23:09:21.258Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -236,11 +236,11 @@
       "priority": "Low",
       "website": "",
       "partners": "COD",
-      "nextStep": "Complete AI-Video Course",
+      "nextStep": "Develop a AI-Video Course",
       "nextStepDate": "",
-      "targetDate": "2026-03-31",
+      "targetDate": "2026-06-30",
       "notes": "Chancellor Priority",
-      "sourceRow": 13
+      "sourceRow": ""
     },
     {
       "id": "aif-c779e435cf",
