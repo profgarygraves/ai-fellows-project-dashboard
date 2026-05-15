@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Fellows Project Dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI Fellows</p>
+          <h1>Project Dashboard</h1>
+          <p class="sync-status" id="syncStatus">Read-only public view</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button edit-only" id="resetDataButton" type="button">Reset seed data</button>
+          <button class="secondary-button" id="exportJsonButton" type="button">Export JSON</button>
+          <button class="secondary-button" id="exportCsvButton" type="button">Export CSV</button>
+          <button class="primary-button edit-only" id="addProjectButton" type="button">Add project</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="summary-grid" aria-label="Project summary">
+          <article class="metric metric-total">
+            <span>Total projects</span>
+            <strong id="metricTotal">0</strong>
+          </article>
+          <article class="metric metric-action">
+            <span>Need next step</span>
+            <strong id="metricNeedsAction">0</strong>
+          </article>
+          <article class="metric metric-due">
+            <span>Overdue actions</span>
+            <strong id="metricDueSoon">0</strong>
+          </article>
+          <article class="metric metric-complete">
+            <span>Completed</span>
+            <strong id="metricComplete">0</strong>
+          </article>
+        </section>
+
+        <section class="workspace-grid">
+          <aside class="control-panel" aria-label="Dashboard controls">
+            <div class="control-group">
+              <label for="searchInput">Search</label>
+              <input id="searchInput" type="search" placeholder="Project, partner, note..." />
+            </div>
+
+            <div class="control-row">
+              <div class="control-group">
+                <label for="statusFilter">Status</label>
+                <select id="statusFilter">
+                  <option value="">All statuses</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <label for="priorityFilter">Priority</label>
+                <select id="priorityFilter">
+                  <option value="">All priorities</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="categoryFilter">Category</label>
+              <select id="categoryFilter">
+                <option value="">All categories</option>
+              </select>
+            </div>
+
+            <div class="control-row">
+              <div class="control-group">
+                <label for="fromDate">From</label>
+                <input id="fromDate" type="date" />
+              </div>
+              <div class="control-group">
+                <label for="toDate">To</label>
+                <input id="toDate" type="date" />
+              </div>
+            </div>
+
+            <div class="control-row">
+              <div class="control-group">
+                <label for="sortField">Sort</label>
+                <select id="sortField">
+                  <option value="recommended">Status + next date</option>
+                  <option value="nextStepDate">Next step date</option>
+                  <option value="targetDate">Target date</option>
+                  <option value="priority">Priority</option>
+                  <option value="name">Project name</option>
+                  <option value="category">Category</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <label for="sortDirection">Order</label>
+                <select id="sortDirection">
+                  <option value="asc">Ascending</option>
+                  <option value="desc">Descending</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="segment" role="group" aria-label="View mode">
+              <button class="segment-button active" type="button" data-view="table">Projects</button>
+              <button class="segment-button" type="button" data-view="report">Report</button>
+            </div>
+
+            <div class="control-actions">
+              <button class="secondary-button" id="clearFiltersButton" type="button">Clear filters</button>
+              <label class="file-button edit-only" for="importJsonInput">Import JSON</label>
+              <input id="importJsonInput" type="file" accept="application/json,.json" hidden />
+            </div>
+
+            <details class="sync-panel">
+              <summary>Editor sync</summary>
+              <p>Visitors can view this site. Only a GitHub account with repo write access can save edits.</p>
+              <div class="control-row">
+                <div class="control-group">
+                  <label for="githubOwnerInput">Owner</label>
+                  <input id="githubOwnerInput" value="profgarygraves" />
+                </div>
+                <div class="control-group">
+                  <label for="githubRepoInput">Repo</label>
+                  <input id="githubRepoInput" value="ai-fellows-project-dashboard" />
+                </div>
+              </div>
+              <div class="control-row">
+                <div class="control-group">
+                  <label for="githubBranchInput">Branch</label>
+                  <input id="githubBranchInput" value="main" />
+                </div>
+                <div class="control-group">
+                  <label for="githubPathInput">Data path</label>
+                  <input id="githubPathInput" value="assets/projects.json" />
+                </div>
+              </div>
+              <div class="control-group">
+                <label for="githubTokenInput">GitHub token</label>
+                <input id="githubTokenInput" type="password" autocomplete="off" placeholder="Fine-grained token with Contents read/write" />
+              </div>
+              <div class="control-actions">
+                <button class="secondary-button" id="saveSyncSettingsButton" type="button">Enable editing</button>
+                <button class="secondary-button" id="pullGithubButton" type="button">Pull from GitHub</button>
+                <button class="primary-button" id="pushGithubButton" type="button">Push now</button>
+              </div>
+            </details>
+          </aside>
+
+          <section class="content-panel">
+            <div class="table-toolbar">
+              <div>
+                <p class="eyebrow">Showing <span id="visibleCount">0</span></p>
+                <h2 id="viewTitle">Projects</h2>
+              </div>
+              <div class="toolbar-actions">
+                <button class="ghost-button" id="printReportButton" type="button">Print report</button>
+              </div>
+            </div>
+
+            <div id="tableView" class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-sort="name">Project</th>
+                    <th data-sort="status">Status</th>
+                    <th data-sort="priority">Priority</th>
+                    <th data-sort="nextStepDate">Next action</th>
+                    <th data-sort="targetDate">Target</th>
+                    <th data-sort="category">Category</th>
+                    <th>Owner</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="projectTableBody"></tbody>
+              </table>
+              <div class="empty-state" id="emptyState" hidden>No projects match the current view.</div>
+            </div>
+
+            <div id="reportView" class="report-view" hidden>
+              <div class="report-summary" id="reportSummary"></div>
+              <div class="report-section">
+                <h3>Next steps</h3>
+                <div id="nextStepsReport"></div>
+              </div>
+              <div class="report-section">
+                <h3>Status pipeline</h3>
+                <div id="statusReport"></div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="projectDialog">
+      <form method="dialog" class="project-form" id="projectForm">
+        <header>
+          <div>
+            <p class="eyebrow">Project record</p>
+            <h2 id="dialogTitle">Edit project</h2>
+          </div>
+          <button class="icon-button" id="closeDialogButton" type="button" aria-label="Close">&times;</button>
+        </header>
+
+        <input id="projectId" type="hidden" />
+
+        <div class="form-grid">
+          <label>
+            Project name
+            <input id="nameInput" required />
+          </label>
+          <label>
+            Status
+            <select id="statusInput"></select>
+          </label>
+          <label>
+            Priority
+            <select id="priorityInput"></select>
+          </label>
+          <label>
+            Category
+            <input id="categoryInput" list="categoryOptions" />
+          </label>
+          <label>
+            Role
+            <input id="roleInput" />
+          </label>
+          <label>
+            Initiative
+            <input id="initiativeInput" />
+          </label>
+          <label>
+            AIF connection
+            <input id="connectionInput" />
+          </label>
+          <label>
+            CCCCO goals
+            <input id="goalsInput" />
+          </label>
+          <label>
+            Website
+            <input id="websiteInput" type="url" />
+          </label>
+          <label>
+            Key partners
+            <input id="partnersInput" />
+          </label>
+          <label>
+            Next step date
+            <input id="nextStepDateInput" type="date" />
+          </label>
+          <label>
+            Target date
+            <input id="targetDateInput" type="date" />
+          </label>
+          <label class="wide">
+            Description
+            <textarea id="descriptionInput" rows="4"></textarea>
+          </label>
+          <label class="wide">
+            Next step
+            <textarea id="nextStepInput" rows="3"></textarea>
+          </label>
+          <label class="wide">
+            Notes
+            <textarea id="notesInput" rows="3"></textarea>
+          </label>
+        </div>
+
+        <footer>
+          <button class="danger-button" id="deleteProjectButton" type="button">Delete</button>
+          <span></span>
+          <button class="secondary-button" id="cancelDialogButton" type="button">Cancel</button>
+          <button class="primary-button" id="saveProjectButton" type="submit">Save project</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <datalist id="categoryOptions"></datalist>
+    <script src="assets/app.js" type="module"></script>
+  </body>
+</html>
