@@ -1,9 +1,21 @@
 {
   "schemaVersion": 1,
-  "generatedFrom": "Garys-AI_Fellows_Project_Dashboard.xlsx",
-  "generatedAt": "2026-05-15T21:47:40.939Z",
+  "generatedFrom": "AI Fellows Project Dashboard",
+  "generatedAt": "2026-05-15T23:04:37.219Z",
+  "statusWorkflow": [
+    "Idea",
+    "Planning",
+    "Experiment",
+    "Pilot",
+    "Active",
+    "Waiting",
+    "Blocked",
+    "Completed",
+    "Archived"
+  ],
   "projects": [
     {
+      "id": "aif-f8fa7f14ee",
       "name": "AI Rapid Venture Curriculum (LaunchLab AI)",
       "category": "AI Tools & Platforms",
       "role": "Lead",
@@ -19,10 +31,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-f8fa7f14ee",
       "sourceRow": 2
     },
     {
+      "id": "aif-02ea49cbaf",
       "name": "Entrepreneurship Incubator Model",
       "category": "Workforce & Curriculum",
       "role": "Lead",
@@ -38,10 +50,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "dough.do for creating Products",
-      "id": "aif-02ea49cbaf",
       "sourceRow": 3
     },
     {
+      "id": "aif-f40dfc5379",
       "name": "AI Student Consultant Network",
       "category": "Workforce & Curriculum",
       "role": "Lead",
@@ -57,10 +69,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-f40dfc5379",
       "sourceRow": 4
     },
     {
+      "id": "aif-e46b946c4d",
       "name": "CCC Student Marketplace / AI Marketplace",
       "category": "AI Tools & Platforms",
       "role": "Advisor",
@@ -76,10 +88,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "Suha",
-      "id": "aif-e46b946c4d",
       "sourceRow": 5
     },
     {
+      "id": "aif-6bc6309ac8",
       "name": "AI Entrepreneurship Startup Weekend",
       "category": "Workforce & Curriculum",
       "role": "Lead",
@@ -95,10 +107,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-6bc6309ac8",
       "sourceRow": 6
     },
     {
+      "id": "aif-61f7711a45",
       "name": "Canvas AI Automation Experiments",
       "category": "Infrastructure & Ops",
       "role": "Lead",
@@ -114,10 +126,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-61f7711a45",
       "sourceRow": 7
     },
     {
+      "id": "aif-7ba6be792b",
       "name": "Element451 Agentic AI Integration",
       "category": "Infrastructure & Ops",
       "role": "Co-Lead",
@@ -133,10 +145,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-7ba6be792b",
       "sourceRow": 8
     },
     {
+      "id": "aif-f2e8dc1ae4",
       "name": "N2N Agentic AI Integration",
       "category": "Infrastructure & Ops",
       "role": "Co-Lead",
@@ -152,10 +164,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "Hongling",
-      "id": "aif-f2e8dc1ae4",
       "sourceRow": 9
     },
     {
+      "id": "aif-7576889776",
       "name": "AI Entrepreneurship Summer Camp",
       "category": "Conference & Training",
       "role": "Contributor",
@@ -171,10 +183,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-7576889776",
       "sourceRow": 10
     },
     {
+      "id": "aif-857575a3cf",
       "name": "Statewide CCC Professional Development Network",
       "category": "Misc / Other",
       "role": "Co-Lead",
@@ -190,10 +202,10 @@
       "nextStepDate": "2026-04-17",
       "targetDate": "",
       "notes": "",
-      "id": "aif-857575a3cf",
       "sourceRow": 11
     },
     {
+      "id": "aif-ac7104dfd1",
       "name": "Future's Summit AI Entrepreneurship Track",
       "category": "Conference & Training",
       "role": "Concept",
@@ -209,10 +221,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-ac7104dfd1",
       "sourceRow": 12
     },
     {
+      "id": "aif-a627166a56",
       "name": "Future's Summit REELs Competition",
       "category": "Conference & Training",
       "role": "Contributor",
@@ -228,10 +240,10 @@
       "nextStepDate": "",
       "targetDate": "2026-03-31",
       "notes": "Chancellor Priority",
-      "id": "aif-a627166a56",
       "sourceRow": 13
     },
     {
+      "id": "aif-c779e435cf",
       "name": "Makerspace AI Assistant [Donnell]",
       "category": "AI Tools & Platforms",
       "role": "Advisor",
@@ -247,10 +259,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-c779e435cf",
       "sourceRow": 14
     },
     {
+      "id": "aif-dbf897ffd6",
       "name": "Theuth Writing Assistant {Scotty-Rachel]",
       "category": "AI Tools & Platforms",
       "role": "Advisor",
@@ -266,11 +278,11 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-dbf897ffd6",
       "sourceRow": 15
     },
     {
-      "name": "Founders AI Marketplace [Suha]",
+      "id": "aif-a1938071cf",
+      "name": "Founders Innovation Marketplace [w/Suha]",
       "category": "AI Tools & Platforms",
       "role": "Co-Lead",
       "initiative": "Entrepreneurship-Apprenticeship-Founder Initiative",
@@ -278,17 +290,17 @@
       "description": "The AI Marketplace is a statewide digital platform designed to connect California Community College faculty, students, and industry partners to collaborate on artificial intelligence projects and entrepreneurial ventures. The platform will allow participants to create profiles, propose project ideas, form interdisciplinary teams, and access resources related to entrepreneurship, intellectual property, and venture development. By enabling faculty-driven innovation and student participation in real-world AI projects, the AI Marketplace aims to support workforce development, foster entrepreneurship, and accelerate the creation of scalable solutions across the California Community College system.",
       "goals": "Access, Success",
       "status": "Active",
-      "priority": "Low",
+      "priority": "Medium",
       "website": "",
       "partners": "",
-      "nextStep": "Project Kickoff with WIl/Sanjay.",
-      "nextStepDate": "2026-03-24",
-      "targetDate": "",
+      "nextStep": "Test and refine system over summer",
+      "nextStepDate": "2026-06-30",
+      "targetDate": "2026-08-31",
       "notes": "",
-      "id": "aif-a1938071cf",
-      "sourceRow": 16
+      "sourceRow": ""
     },
     {
+      "id": "aif-772c012733",
       "name": "ASCCC Conference SPRING 2026",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -304,10 +316,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-772c012733",
       "sourceRow": 17
     },
     {
+      "id": "aif-49245e8b83",
       "name": "CCCAOE Conference FALL 2025",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -316,17 +328,17 @@
       "description": "Presenting \"AI tools\" GAMMA, NOTEBOOKLM and VIBECODING",
       "goals": "Support, Access",
       "status": "Completed",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "2025-10-31",
       "notes": "",
-      "id": "aif-49245e8b83",
       "sourceRow": 18
     },
     {
+      "id": "aif-9597670b8c",
       "name": "Coursera:  Google AI Pro",
       "category": "Conference & Training",
       "role": "Lead",
@@ -342,10 +354,10 @@
       "nextStepDate": "",
       "targetDate": "2027-06-30",
       "notes": "",
-      "id": "aif-9597670b8c",
       "sourceRow": 19
     },
     {
+      "id": "aif-9f9c8b0046",
       "name": "INTEL: Community AI Courses",
       "category": "Conference & Training",
       "role": "Lead",
@@ -361,10 +373,10 @@
       "nextStepDate": "",
       "targetDate": "2027-06-30",
       "notes": "",
-      "id": "aif-9f9c8b0046",
       "sourceRow": 20
     },
     {
+      "id": "aif-367c3111fb",
       "name": "WEDD AI Training",
       "category": "Conference & Training",
       "role": "Co-Lead",
@@ -380,10 +392,10 @@
       "nextStepDate": "",
       "targetDate": "2026-03-02",
       "notes": "",
-      "id": "aif-367c3111fb",
       "sourceRow": 21
     },
     {
+      "id": "aif-b786036134",
       "name": "California Apprenticeship Initiative (CAI) GRANT",
       "category": "Misc / Other",
       "role": "Lead",
@@ -399,10 +411,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-b786036134",
       "sourceRow": 22
     },
     {
+      "id": "aif-bec80084f2",
       "name": "Applied Human-AI Collaboration & Leadership Bachelor’s Degree",
       "category": "Workforce & Curriculum",
       "role": "Lead",
@@ -418,10 +430,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-bec80084f2",
       "sourceRow": 23
     },
     {
+      "id": "aif-22325c483e",
       "name": "College Corps",
       "category": "Misc / Other",
       "role": "Lead",
@@ -437,10 +449,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-22325c483e",
       "sourceRow": 24
     },
     {
+      "id": "aif-0d19516e0e",
       "name": "AI and Credit for Prior Learning",
       "category": "Workforce & Curriculum",
       "role": "Co-Lead",
@@ -456,10 +468,10 @@
       "nextStepDate": "",
       "targetDate": "2026-09-01",
       "notes": "",
-      "id": "aif-0d19516e0e",
       "sourceRow": 25
     },
     {
+      "id": "aif-ba948c8eca",
       "name": "GOOGLE Generative AI Leader Certification",
       "category": "Conference & Training",
       "role": "Student",
@@ -475,10 +487,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-ba948c8eca",
       "sourceRow": 26
     },
     {
+      "id": "aif-04d1f8ae0f",
       "name": "CCCCO AI Council",
       "category": "Misc / Other",
       "role": "Member",
@@ -494,10 +506,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-04d1f8ae0f",
       "sourceRow": 27
     },
     {
+      "id": "aif-c72adaf21c",
       "name": "ASCCC AI Cacus",
       "category": "Misc / Other",
       "role": "Member",
@@ -513,10 +525,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-c72adaf21c",
       "sourceRow": 28
     },
     {
+      "id": "aif-629bdb8be0",
       "name": "AI Certificates and Degrees at Fullerton College",
       "category": "Workforce & Curriculum",
       "role": "Lead",
@@ -532,10 +544,10 @@
       "nextStepDate": "",
       "targetDate": "2026-07-01",
       "notes": "Approved by CCCCO March 2026",
-      "id": "aif-629bdb8be0",
       "sourceRow": 29
     },
     {
+      "id": "aif-9bcab76092",
       "name": "NAAIC",
       "category": "Misc / Other",
       "role": "Member",
@@ -544,17 +556,17 @@
       "description": "Moving AI Education forward in community colleges throughout the USA",
       "goals": "Access, Success",
       "status": "Active",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-9bcab76092",
       "sourceRow": 30
     },
     {
+      "id": "aif-0ee93c8625",
       "name": "Adobe EDUMAX",
       "category": "Conference & Training",
       "role": "Participant",
@@ -570,10 +582,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-0ee93c8625",
       "sourceRow": 31
     },
     {
+      "id": "aif-22e6c8bc7a",
       "name": "CCCAOE Conference SPRING 2026",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -582,17 +594,17 @@
       "description": "Presenting \"AI Teaching PowerStack\" - Gamma, NotebookLM & VibeCoding for Dashboards",
       "goals": "Support",
       "status": "Completed",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "Finalize my presentation and interactive elements",
       "nextStepDate": "",
       "targetDate": "2026-04-21",
       "notes": "Accepted by CCCAOE",
-      "id": "aif-22e6c8bc7a",
       "sourceRow": 32
     },
     {
+      "id": "aif-5ec101b19f",
       "name": "www.eduAIatlas.com - An AI resource library",
       "category": "AI Tools & Platforms",
       "role": "Lead",
@@ -608,10 +620,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-5ec101b19f",
       "sourceRow": 33
     },
     {
+      "id": "aif-f2d11817a4",
       "name": "AI Awareness Month and Day (November 2026)",
       "category": "Workforce & Curriculum",
       "role": "Lead",
@@ -627,10 +639,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-f2d11817a4",
       "sourceRow": 34
     },
     {
+      "id": "aif-0a78a42e98",
       "name": "AI Literacy For Students Module",
       "category": "Workforce & Curriculum",
       "role": "Lead",
@@ -646,10 +658,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-0a78a42e98",
       "sourceRow": 35
     },
     {
+      "id": "aif-561bbbf3df",
       "name": "tudioNOVA / Playlab AI chatbots",
       "category": "AI Tools & Platforms",
       "role": "Lead",
@@ -665,10 +677,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-561bbbf3df",
       "sourceRow": 36
     },
     {
+      "id": "aif-9186c97811",
       "name": "CurricUNET → Documents Scraper",
       "category": "AI Tools & Platforms",
       "role": "Lead",
@@ -684,10 +696,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-9186c97811",
       "sourceRow": 37
     },
     {
+      "id": "aif-c10fde1f4e",
       "name": "Canvas Accessibility API Audit Tool",
       "category": "AI Tools & Platforms",
       "role": "Co-Lead",
@@ -703,10 +715,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-c10fde1f4e",
       "sourceRow": 38
     },
     {
+      "id": "aif-17d4eba4e9",
       "name": "DDP 106: Generative AI for Creatives",
       "category": "Workforce & Curriculum",
       "role": "Lead",
@@ -722,10 +734,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-17d4eba4e9",
       "sourceRow": 39
     },
     {
+      "id": "aif-f19184a799",
       "name": "AI Governance & Ethical Implementation Framework",
       "category": "Misc / Other",
       "role": "lead",
@@ -741,10 +753,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-f19184a799",
       "sourceRow": 40
     },
     {
+      "id": "aif-5418551f16",
       "name": "AI Agent Builder Curriculum",
       "category": "Workforce & Curriculum",
       "role": "lead",
@@ -760,10 +772,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-5418551f16",
       "sourceRow": 41
     },
     {
+      "id": "aif-ff216ec2b1",
       "name": "Student AI Portfolio / Passport System",
       "category": "AI Tools & Platforms",
       "role": "lead",
@@ -779,10 +791,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-ff216ec2b1",
       "sourceRow": 42
     },
     {
+      "id": "aif-8ff4382c68",
       "name": "AI Tech Audit",
       "category": "AI Tools & Platforms",
       "role": "Lead",
@@ -798,10 +810,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-8ff4382c68",
       "sourceRow": 43
     },
     {
+      "id": "aif-14c4f72ba1",
       "name": "Embodied AI (NAO Robot)",
       "category": "AI Tools & Platforms",
       "role": "Lead",
@@ -817,10 +829,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-14c4f72ba1",
       "sourceRow": 44
     },
     {
+      "id": "aif-516de4f985",
       "name": "NAAIC FALL 2026: Applied to present",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -836,10 +848,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-516de4f985",
       "sourceRow": 45
     },
     {
+      "id": "aif-b6316326a4",
       "name": "CCCCO Future's Summit: Applied to present w/Renah",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -855,10 +867,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-b6316326a4",
       "sourceRow": 46
     },
     {
+      "id": "aif-f1c8b7eab3",
       "name": "ASU Fall Agentic Event: Applied to Present",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -874,10 +886,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-f1c8b7eab3",
       "sourceRow": 47
     },
     {
+      "id": "aif-3ac4a194e7",
       "name": "COD AI Startup Weekend Event",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -893,10 +905,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-3ac4a194e7",
       "sourceRow": 48
     },
     {
+      "id": "aif-0813d203ce",
       "name": "FullColl - PLAYLAB Faculty Training",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -912,10 +924,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-0813d203ce",
       "sourceRow": 49
     },
     {
+      "id": "aif-74e4b29fd6",
       "name": "COD FLEX Day - PLAYLAB Faculty Training",
       "category": "Conference & Training",
       "role": "Presenter",
@@ -931,10 +943,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-74e4b29fd6",
       "sourceRow": 50
     },
     {
+      "id": "aif-fbee396bb7",
       "name": "CCC AgenticAI Convening",
       "category": "Conference & Training",
       "role": "Co-Lead",
@@ -950,10 +962,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-fbee396bb7",
       "sourceRow": 51
     },
     {
+      "id": "aif-973b661da5",
       "name": "Credit for Prior Leaning AI",
       "category": "AI Tools & Platforms",
       "role": "Lead",
@@ -969,10 +981,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "id": "aif-973b661da5",
       "sourceRow": 52
     },
     {
+      "id": "aif-926321e04b",
       "name": "Microsoft Co-Pilot - Re-Integration",
       "category": "AI Tools & Platforms",
       "role": "Co-Lead",
@@ -988,10 +1000,10 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "What most don't understand is that Co-Pilot is FERPA-compliant, already exists in your Microsoft products, and is available as a downloadable M365 app for devices.  Revising, creating awareness, and using this AI tool.",
-      "id": "aif-926321e04b",
       "sourceRow": 53
     },
     {
+      "id": "aif-68d5b45be2",
       "name": "AI Apprenticeships",
       "category": "Workforce & Economic Development",
       "role": "AI Fellow Lead",
@@ -1000,17 +1012,17 @@
       "description": "This initiative focuses on developing scalable, credit-bearing apprenticeship pathways in AI and emerging technologies across California’s 116 community colleges. It integrates classroom instruction with paid work experience and Credit for Prior Learning.",
       "goals": "Access, Success, Support",
       "status": "Active",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "Chancellor Priority",
-      "id": "aif-68d5b45be2",
       "sourceRow": 54
     },
     {
+      "id": "aif-4849a94978",
       "name": "Entrepreneurship/Founders",
       "category": "Workforce & Economic Development",
       "role": "AI Fellow Lead / AI Fellow Support",
@@ -1019,17 +1031,17 @@
       "description": "This project equips students and faculty with the skills needed to launch new ventures in an AI-enabled economy. It includes building a statewide framework for AI-powered business incubation and Student AI Consultant Networks.",
       "goals": "Access, Success, Support",
       "status": "Active",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "Chancellor Priority",
-      "id": "aif-4849a94978",
       "sourceRow": 55
     },
     {
+      "id": "aif-763410857d",
       "name": "Menlo Lab AR/VR",
       "category": "Workforce & Economic Development",
       "role": "AI Fellow Support",
@@ -1038,17 +1050,17 @@
       "description": "Bridges education and industry through immersive technology. It focuses on five core verticals: Curriculum Innovation, Professional Development, Software Adoption, Hardware Exploration, and Fund Development.",
       "goals": "Access, Success, Support",
       "status": "Active",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "Chancellor Priority",
-      "id": "aif-763410857d",
       "sourceRow": 56
     },
     {
+      "id": "aif-a830fd8f68",
       "name": "Undergraduate Research & Innovation Hub",
       "category": "Workforce & Economic Development",
       "role": "AI Fellow Support (Co-supported with Donnell)",
@@ -1057,17 +1069,17 @@
       "description": "Piloted at Folsom Lake College, this initiative democratizes access to undergraduate AI research, creating structured pathways for students to engage in hands-on research and innovation.",
       "goals": "Access, Success, Support",
       "status": "Active",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "Chancellor Priority",
-      "id": "aif-a830fd8f68",
       "sourceRow": 57
     },
     {
+      "id": "aif-1ac9868b74",
       "name": "[merged] Play Lab 2025-2026",
       "category": "AI Infrastructure",
       "role": "AI Fellow Co-Lead (with Dominigue Wu and Hongling Yang)",
@@ -1076,17 +1088,17 @@
       "description": "The PlayLab series prepares educators to design and deploy school-safe, purpose-built AI tools. It uses a train-the-trainer model to scale AI-driven practices across departments and student-support areas.",
       "goals": "Access, Success, Support",
       "status": "Active",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "Chancellor Priority",
-      "id": "aif-1ac9868b74",
       "sourceRow": 58
     },
     {
+      "id": "aif-1c62e9f09f",
       "name": "Agentic AI",
       "category": "AI Infrastructure",
       "role": "AI Fellow Support (Co-supported with Scotty)",
@@ -1095,26 +1107,14 @@
       "description": "This demonstration project investigates next-generation agentic AI systems that can autonomously coordinate actions across platforms to personalize learning and automate administrative workflows.",
       "goals": "Access, Success, Support",
       "status": "Active",
-      "priority": "",
+      "priority": "Medium",
       "website": "",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "Chancellor Priority",
-      "id": "aif-1c62e9f09f",
       "sourceRow": 59
     }
-  ],
-  "statusWorkflow": [
-    "Idea",
-    "Planning",
-    "Experiment",
-    "Pilot",
-    "Active",
-    "Waiting",
-    "Blocked",
-    "Completed",
-    "Archived"
   ]
 }
