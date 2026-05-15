@@ -244,41 +244,41 @@ function fillSelect(select, values, blankLabel = "") {
 }
 
 function bindEvents() {
-  els.searchInput.addEventListener("input", () => updateFilter("search", els.searchInput.value));
-  els.statusFilter.addEventListener("change", () => updateFilter("status", els.statusFilter.value));
-  els.priorityFilter.addEventListener("change", () => updateFilter("priority", els.priorityFilter.value));
-  els.categoryFilter.addEventListener("change", () => updateFilter("category", els.categoryFilter.value));
-  els.fromDate.addEventListener("change", () => updateFilter("fromDate", els.fromDate.value));
-  els.toDate.addEventListener("change", () => updateFilter("toDate", els.toDate.value));
-  els.sortField.addEventListener("change", () => {
+  on(els.searchInput, "input", () => updateFilter("search", els.searchInput.value));
+  on(els.statusFilter, "change", () => updateFilter("status", els.statusFilter.value));
+  on(els.priorityFilter, "change", () => updateFilter("priority", els.priorityFilter.value));
+  on(els.categoryFilter, "change", () => updateFilter("category", els.categoryFilter.value));
+  on(els.fromDate, "change", () => updateFilter("fromDate", els.fromDate.value));
+  on(els.toDate, "change", () => updateFilter("toDate", els.toDate.value));
+  on(els.sortField, "change", () => {
     state.sortField = els.sortField.value;
     render();
   });
-  els.sortDirection.addEventListener("change", () => {
+  on(els.sortDirection, "change", () => {
     state.sortDirection = els.sortDirection.value;
     render();
   });
-  els.clearFiltersButton.addEventListener("click", clearFilters);
-  els.addProjectButton.addEventListener("click", () => openProjectDialog());
-  els.resetStatusesButton.addEventListener("click", resetStatuses);
-  els.resetDataButton.addEventListener("click", resetSeedData);
-  els.exportJsonButton.addEventListener("click", exportJson);
-  els.exportCsvButton.addEventListener("click", exportCsv);
-  els.importJsonInput.addEventListener("change", importJson);
-  els.enableEditingButton.addEventListener("click", openAuthDialog);
-  els.authForm.addEventListener("submit", enableEditing);
-  els.closeAuthDialogButton.addEventListener("click", closeAuthDialog);
-  els.cancelAuthDialogButton.addEventListener("click", closeAuthDialog);
-  els.printReportButton.addEventListener("click", () => {
+  on(els.clearFiltersButton, "click", clearFilters);
+  on(els.addProjectButton, "click", () => openProjectDialog());
+  on(els.resetStatusesButton, "click", resetStatuses);
+  on(els.resetDataButton, "click", resetSeedData);
+  on(els.exportJsonButton, "click", exportJson);
+  on(els.exportCsvButton, "click", exportCsv);
+  on(els.importJsonInput, "change", importJson);
+  on(els.enableEditingButton, "click", openAuthDialog);
+  on(els.authForm, "submit", enableEditing);
+  on(els.closeAuthDialogButton, "click", closeAuthDialog);
+  on(els.cancelAuthDialogButton, "click", closeAuthDialog);
+  on(els.printReportButton, "click", () => {
     state.view = "report";
     syncViewButtons();
     render();
     window.print();
   });
-  els.closeDialogButton.addEventListener("click", closeDialog);
-  els.cancelDialogButton.addEventListener("click", closeDialog);
-  els.deleteProjectButton.addEventListener("click", deleteCurrentProject);
-  els.form.addEventListener("submit", saveProjectFromForm);
+  on(els.closeDialogButton, "click", closeDialog);
+  on(els.cancelDialogButton, "click", closeDialog);
+  on(els.deleteProjectButton, "click", deleteCurrentProject);
+  on(els.form, "submit", saveProjectFromForm);
 
   document.querySelectorAll("[data-view]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -307,6 +307,10 @@ function bindEvents() {
     const button = event.target.closest("[data-edit-id]");
     if (button) openProjectDialog(button.dataset.editId);
   });
+}
+
+function on(element, eventName, handler) {
+  if (element) element.addEventListener(eventName, handler);
 }
 
 function updateFilter(key, value) {
