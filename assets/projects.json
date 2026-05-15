@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-15T23:09:21.258Z",
+  "generatedAt": "2026-05-15T23:10:21.148Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -605,7 +605,7 @@
     },
     {
       "id": "aif-5ec101b19f",
-      "name": "www.eduAIatlas.com - An AI resource library",
+      "name": "The EdTech AI Atlas.  An AI resource library with links, training and news",
       "category": "AI Tools & Platforms",
       "role": "Lead",
       "initiative": "AI Fellows",
@@ -614,13 +614,13 @@
       "goals": "Access, Support",
       "status": "Active",
       "priority": "Low",
-      "website": "www.eduaiatlas.com",
+      "website": "https://www.eduAIatlas.com",
       "partners": "",
-      "nextStep": "",
+      "nextStep": "On-Going Updates",
       "nextStepDate": "",
-      "targetDate": "",
+      "targetDate": "2026-06-30",
       "notes": "",
-      "sourceRow": 33
+      "sourceRow": ""
     },
     {
       "id": "aif-f2d11817a4",
