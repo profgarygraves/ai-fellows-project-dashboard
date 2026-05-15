@@ -792,15 +792,21 @@ async function enableEditing(event) {
   state.github = currentGithubConfig();
   localStorage.setItem(SYNC_CONFIG_KEY, JSON.stringify(state.github));
   const token = clean(els.githubTokenInput.value);
-  if (token) sessionStorage.setItem(SYNC_TOKEN_KEY, token);
 
-  if (!readGithubToken()) {
-    setSyncStatus("Paste a GitHub token to enable editing.", "error");
+  if (!isLikelyGithubToken(token)) {
+    sessionStorage.removeItem(SYNC_TOKEN_KEY);
+    setSyncStatus("Paste a GitHub personal access token, not an authenticator code.", "error");
+    window.alert("That does not look like a GitHub personal access token. Use a token that starts with github_pat_ or ghp_, not the six-digit authenticator code.");
     render();
     return;
   }
 
+  sessionStorage.setItem(SYNC_TOKEN_KEY, token);
   await pullFromGithub(true);
+}
+
+function isLikelyGithubToken(token) {
+  return /^(github_pat_|ghp_|gho_|ghu_|ghs_|ghr_)/.test(token);
 }
 
 async function pullLatestPublicData() {

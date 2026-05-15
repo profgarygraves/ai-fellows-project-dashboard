@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Fellows Project Dashboard</title>
-    <link rel="stylesheet" href="assets/styles.css?v=20260515-header-checkbox" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260515-token-help" />
   </head>
   <body>
     <div class="app-shell">
@@ -263,10 +263,11 @@
         </header>
 
         <div class="auth-body">
-          <p>Paste your GitHub editor token to unlock project editing, import/export, and automatic GitHub sync.</p>
+          <p>Paste a GitHub personal access token, not the six-digit authenticator code. The token must have Contents read/write access to <strong>profgarygraves/ai-fellows-project-dashboard</strong>.</p>
+          <a class="help-link" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">Create a fine-grained GitHub token</a>
           <label>
             GitHub token
-            <input id="githubTokenInput" type="password" autocomplete="off" placeholder="Fine-grained token with Contents read/write" required />
+            <input id="githubTokenInput" type="password" autocomplete="off" placeholder="Starts with github_pat_ or ghp_" required />
           </label>
           <input id="githubOwnerInput" type="hidden" value="profgarygraves" />
           <input id="githubRepoInput" type="hidden" value="ai-fellows-project-dashboard" />
@@ -282,6 +283,6 @@
     </dialog>
 
     <datalist id="categoryOptions"></datalist>
-    <script src="assets/app.js?v=20260515-header-checkbox" type="module"></script>
+    <script src="assets/app.js?v=20260515-token-help" type="module"></script>
   </body>
 </html>
