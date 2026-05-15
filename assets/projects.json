@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-15T23:07:18.481Z",
+  "generatedAt": "2026-05-15T23:08:14.687Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -1015,11 +1015,11 @@
       "priority": "Medium",
       "website": "",
       "partners": "",
-      "nextStep": "",
+      "nextStep": "CAI proposal was rejected.  Connect with Don on next needs",
       "nextStepDate": "",
-      "targetDate": "",
+      "targetDate": "2027-06-30",
       "notes": "Chancellor Priority",
-      "sourceRow": 54
+      "sourceRow": ""
     },
     {
       "id": "aif-4849a94978",
