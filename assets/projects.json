@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-15T23:08:14.687Z",
+  "generatedAt": "2026-05-15T23:08:48.270Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -996,11 +996,11 @@
       "priority": "Medium",
       "website": "",
       "partners": "",
-      "nextStep": "Attend MS trainings wiht NAAIC to re-use MS training materials",
-      "nextStepDate": "",
+      "nextStep": "Attend MS trainings with NAAIC to reuse MS training materials",
+      "nextStepDate": "2026-05-15",
       "targetDate": "",
       "notes": "What most don't understand is that Co-Pilot is FERPA-compliant, already exists in your Microsoft products, and is available as a downloadable M365 app for devices.  Revising, creating awareness, and using this AI tool.",
-      "sourceRow": 53
+      "sourceRow": ""
     },
     {
       "id": "aif-68d5b45be2",
