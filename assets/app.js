@@ -231,7 +231,7 @@ function normalizePriority(value) {
 }
 
 function hydrateSelects() {
-  fillSelect(els.statusFilter, ["", ...STATUS_OPTIONS], "All statuses");
+  refreshStatusFilterOptions();
   fillSelect(els.priorityFilter, ["", ...PRIORITY_OPTIONS], "All priorities");
   fillSelect(els.statusInput, STATUS_OPTIONS);
   fillSelect(els.priorityInput, PRIORITY_OPTIONS);
@@ -366,6 +366,7 @@ async function resetStatuses() {
 }
 
 function render() {
+  refreshStatusFilterOptions();
   const filtered = getFilteredProjects();
   document.body.classList.toggle("edit-locked", !state.canEdit);
   document.body.classList.toggle("edit-unlocked", state.canEdit);
@@ -388,6 +389,21 @@ function updateDynamicOptions() {
   els.categoryOptions.innerHTML = categories
     .map((category) => `<option value="${escapeAttr(category)}"></option>`)
     .join("");
+}
+
+function refreshStatusFilterOptions() {
+  if (!els.statusFilter) return;
+  const currentStatus = els.statusFilter.value;
+  const statuses = state.filters.includeClosed
+    ? STATUS_OPTIONS
+    : STATUS_OPTIONS.filter((status) => !CLOSED_STATUSES.has(status));
+
+  if (currentStatus && !statuses.includes(currentStatus)) {
+    state.filters.status = "";
+  }
+
+  fillSelect(els.statusFilter, ["", ...statuses], state.filters.includeClosed ? "All statuses" : "Open statuses");
+  els.statusFilter.value = state.filters.status;
 }
 
 function renderMetrics() {
