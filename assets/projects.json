@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-15T23:04:37.219Z",
+  "generatedAt": "2026-05-15T23:04:52.167Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -427,10 +427,10 @@
       "website": "https://profgarygraves.github.io/bdp-proposal-hub/",
       "partners": "",
       "nextStep": "OCRC Approval - submit by 5/29",
-      "nextStepDate": "",
+      "nextStepDate": "2026-05-29",
       "targetDate": "",
       "notes": "",
-      "sourceRow": 23
+      "sourceRow": ""
     },
     {
       "id": "aif-22325c483e",
