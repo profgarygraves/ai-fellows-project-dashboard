@@ -79,6 +79,7 @@ const els = {
   nextStepsReport: document.querySelector("#nextStepsReport"),
   statusReport: document.querySelector("#statusReport"),
   printReportButton: document.querySelector("#printReportButton"),
+  enableEditingButton: document.querySelector("#enableEditingButton"),
   addProjectButton: document.querySelector("#addProjectButton"),
   resetDataButton: document.querySelector("#resetDataButton"),
   exportJsonButton: document.querySelector("#exportJsonButton"),
@@ -91,8 +92,10 @@ const els = {
   githubPathInput: document.querySelector("#githubPathInput"),
   githubTokenInput: document.querySelector("#githubTokenInput"),
   saveSyncSettingsButton: document.querySelector("#saveSyncSettingsButton"),
-  pullGithubButton: document.querySelector("#pullGithubButton"),
-  pushGithubButton: document.querySelector("#pushGithubButton"),
+  authDialog: document.querySelector("#authDialog"),
+  authForm: document.querySelector("#authForm"),
+  closeAuthDialogButton: document.querySelector("#closeAuthDialogButton"),
+  cancelAuthDialogButton: document.querySelector("#cancelAuthDialogButton"),
   dialog: document.querySelector("#projectDialog"),
   form: document.querySelector("#projectForm"),
   dialogTitle: document.querySelector("#dialogTitle"),
@@ -124,14 +127,13 @@ async function init() {
   state.seedProjects = payload.projects.map(normalizeProject);
   state.projects = loadProjects();
   hydrateSyncForm();
-  state.canEdit = Boolean(readGithubToken());
   hydrateSelects();
   bindEvents();
   render();
   pullLatestPublicData().then((updated) => {
     if (updated) render();
   });
-  if (state.canEdit) await pullFromGithub(false);
+  if (readGithubToken()) await pullFromGithub(false);
 }
 
 function loadProjects() {
@@ -261,9 +263,10 @@ function bindEvents() {
   els.exportJsonButton.addEventListener("click", exportJson);
   els.exportCsvButton.addEventListener("click", exportCsv);
   els.importJsonInput.addEventListener("change", importJson);
-  els.saveSyncSettingsButton.addEventListener("click", enableEditing);
-  els.pullGithubButton.addEventListener("click", () => pullFromGithub(true));
-  els.pushGithubButton.addEventListener("click", () => pushToGithub("Manual AI Fellows dashboard sync"));
+  els.enableEditingButton.addEventListener("click", openAuthDialog);
+  els.authForm.addEventListener("submit", enableEditing);
+  els.closeAuthDialogButton.addEventListener("click", closeAuthDialog);
+  els.cancelAuthDialogButton.addEventListener("click", closeAuthDialog);
   els.printReportButton.addEventListener("click", () => {
     state.view = "report";
     syncViewButtons();
@@ -337,6 +340,7 @@ async function resetSeedData() {
 function render() {
   const filtered = getFilteredProjects();
   document.body.classList.toggle("edit-locked", !state.canEdit);
+  document.body.classList.toggle("edit-unlocked", state.canEdit);
   renderSyncStatus();
   updateDynamicOptions();
   renderMetrics();
@@ -576,6 +580,18 @@ function closeDialog() {
   els.form.reset();
 }
 
+function openAuthDialog() {
+  hydrateSyncForm();
+  els.authDialog.showModal();
+  els.githubTokenInput.focus();
+}
+
+function closeAuthDialog() {
+  els.authDialog.close();
+  els.authForm.reset();
+  hydrateSyncForm();
+}
+
 function createBlankProject() {
   return {
     id: crypto.randomUUID(),
@@ -726,14 +742,14 @@ function currentGithubConfig() {
   };
 }
 
-async function enableEditing() {
+async function enableEditing(event) {
+  event.preventDefault();
   state.github = currentGithubConfig();
   localStorage.setItem(SYNC_CONFIG_KEY, JSON.stringify(state.github));
   const token = clean(els.githubTokenInput.value);
   if (token) sessionStorage.setItem(SYNC_TOKEN_KEY, token);
-  state.canEdit = Boolean(readGithubToken());
 
-  if (!state.canEdit) {
+  if (!readGithubToken()) {
     setSyncStatus("Paste a GitHub token to enable editing.", "error");
     render();
     return;
@@ -778,8 +794,11 @@ async function pullFromGithub(showAlerts) {
     saveProjects();
     state.canEdit = true;
     setSyncStatus("Editor mode active. Synced from GitHub.", "ready");
+    if (els.authDialog.open) closeAuthDialog();
     render();
   } catch (error) {
+    state.canEdit = false;
+    sessionStorage.removeItem(SYNC_TOKEN_KEY);
     setSyncStatus(`GitHub pull failed: ${error.message}`, "error");
     if (showAlerts) window.alert(`GitHub pull failed: ${error.message}`);
     render();
@@ -856,7 +875,7 @@ function renderSyncStatus() {
     els.syncStatus.classList.add("ready");
     els.syncStatus.classList.remove("error");
   } else {
-    els.syncStatus.textContent = "Read-only public view. Enable editor sync to make changes.";
+    els.syncStatus.textContent = "Read-only public view. Enable editing to make changes.";
     els.syncStatus.classList.remove("ready", "error");
   }
 }

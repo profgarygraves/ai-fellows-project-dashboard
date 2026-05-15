@@ -18,9 +18,10 @@ A static, GitHub Pages-ready dashboard for tracking AI Fellows projects.
 GitHub Pages cannot safely hide a real edit password in static website code. This site therefore uses GitHub permissions for edit protection:
 
 1. Public visitors can view the dashboard.
-2. Editors open **Editor sync** in the sidebar.
+2. Editors click **Enable editing**.
 3. Editors paste a fine-grained GitHub token with Contents read/write access to this repository.
-4. Project edits commit directly to `assets/projects.json` on GitHub.
+4. After GitHub validates the token, edit controls, import/export, and automatic sync are unlocked.
+5. Project edits commit directly to `assets/projects.json` on GitHub.
 
 The token is kept in session storage for the current browser tab. It is not committed to the repo.
 

@@ -120,6 +120,10 @@ button {
   display: none !important;
 }
 
+.edit-unlocked .public-only {
+  display: none !important;
+}
+
 .primary-button,
 .secondary-button,
 .ghost-button,
@@ -308,25 +312,6 @@ textarea:focus {
   padding: 5px;
   border-radius: 8px;
   background: #edf3f6;
-}
-
-.sync-panel {
-  margin-top: 16px;
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
-}
-
-.sync-panel summary {
-  color: var(--ink);
-  cursor: pointer;
-  font-weight: 900;
-}
-
-.sync-panel p {
-  margin: 10px 0 14px;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.4;
 }
 
 .segment-button {
@@ -638,22 +623,33 @@ dialog::backdrop {
   background: rgba(23, 32, 42, 0.5);
 }
 
-.project-form {
+.project-form,
+.auth-form {
   display: grid;
   gap: 0;
 }
 
 .project-form header,
-.project-form footer {
+.project-form footer,
+.auth-form header,
+.auth-form footer {
   padding: 18px;
 }
 
-.project-form header {
+.project-form header,
+.auth-form header {
   border-bottom: 1px solid var(--line);
 }
 
 .project-form footer {
   grid-template-columns: auto 1fr auto auto;
+  border-top: 1px solid var(--line);
+}
+
+.auth-form footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
   border-top: 1px solid var(--line);
 }
 
@@ -673,6 +669,23 @@ dialog::backdrop {
 
 .form-grid .wide {
   grid-column: 1 / -1;
+}
+
+.auth-body {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.auth-body label {
+  display: grid;
+  gap: 7px;
+}
+
+.auth-body p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
 }
 
 @media (max-width: 980px) {

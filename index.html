@@ -15,9 +15,10 @@
           <p class="sync-status" id="syncStatus">Read-only public view</p>
         </div>
         <div class="topbar-actions">
+          <button class="secondary-button public-only" id="enableEditingButton" type="button">Enable editing</button>
           <button class="ghost-button edit-only" id="resetDataButton" type="button">Reset seed data</button>
-          <button class="secondary-button" id="exportJsonButton" type="button">Export JSON</button>
-          <button class="secondary-button" id="exportCsvButton" type="button">Export CSV</button>
+          <button class="secondary-button edit-only" id="exportJsonButton" type="button">Export JSON</button>
+          <button class="secondary-button edit-only" id="exportCsvButton" type="button">Export CSV</button>
           <button class="primary-button edit-only" id="addProjectButton" type="button">Add project</button>
         </div>
       </header>
@@ -113,40 +114,6 @@
               <label class="file-button edit-only" for="importJsonInput">Import JSON</label>
               <input id="importJsonInput" type="file" accept="application/json,.json" hidden />
             </div>
-
-            <details class="sync-panel">
-              <summary>Editor sync</summary>
-              <p>Visitors can view this site. Only a GitHub account with repo write access can save edits.</p>
-              <div class="control-row">
-                <div class="control-group">
-                  <label for="githubOwnerInput">Owner</label>
-                  <input id="githubOwnerInput" value="profgarygraves" />
-                </div>
-                <div class="control-group">
-                  <label for="githubRepoInput">Repo</label>
-                  <input id="githubRepoInput" value="ai-fellows-project-dashboard" />
-                </div>
-              </div>
-              <div class="control-row">
-                <div class="control-group">
-                  <label for="githubBranchInput">Branch</label>
-                  <input id="githubBranchInput" value="main" />
-                </div>
-                <div class="control-group">
-                  <label for="githubPathInput">Data path</label>
-                  <input id="githubPathInput" value="assets/projects.json" />
-                </div>
-              </div>
-              <div class="control-group">
-                <label for="githubTokenInput">GitHub token</label>
-                <input id="githubTokenInput" type="password" autocomplete="off" placeholder="Fine-grained token with Contents read/write" />
-              </div>
-              <div class="control-actions">
-                <button class="secondary-button" id="saveSyncSettingsButton" type="button">Enable editing</button>
-                <button class="secondary-button" id="pullGithubButton" type="button">Pull from GitHub</button>
-                <button class="primary-button" id="pushGithubButton" type="button">Push now</button>
-              </div>
-            </details>
           </aside>
 
           <section class="content-panel">
@@ -275,6 +242,35 @@
           <span></span>
           <button class="secondary-button" id="cancelDialogButton" type="button">Cancel</button>
           <button class="primary-button" id="saveProjectButton" type="submit">Save project</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog id="authDialog">
+      <form method="dialog" class="auth-form" id="authForm">
+        <header>
+          <div>
+            <p class="eyebrow">Private editor</p>
+            <h2>Enable editing</h2>
+          </div>
+          <button class="icon-button" id="closeAuthDialogButton" type="button" aria-label="Close">&times;</button>
+        </header>
+
+        <div class="auth-body">
+          <p>Paste your GitHub editor token to unlock project editing, import/export, and automatic GitHub sync.</p>
+          <label>
+            GitHub token
+            <input id="githubTokenInput" type="password" autocomplete="off" placeholder="Fine-grained token with Contents read/write" required />
+          </label>
+          <input id="githubOwnerInput" type="hidden" value="profgarygraves" />
+          <input id="githubRepoInput" type="hidden" value="ai-fellows-project-dashboard" />
+          <input id="githubBranchInput" type="hidden" value="main" />
+          <input id="githubPathInput" type="hidden" value="assets/projects.json" />
+        </div>
+
+        <footer>
+          <button class="secondary-button" id="cancelAuthDialogButton" type="button">Cancel</button>
+          <button class="primary-button" id="saveSyncSettingsButton" type="submit">Validate and enable</button>
         </footer>
       </form>
     </dialog>
