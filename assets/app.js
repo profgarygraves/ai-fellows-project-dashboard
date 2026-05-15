@@ -81,6 +81,7 @@ const els = {
   printReportButton: document.querySelector("#printReportButton"),
   enableEditingButton: document.querySelector("#enableEditingButton"),
   addProjectButton: document.querySelector("#addProjectButton"),
+  resetStatusesButton: document.querySelector("#resetStatusesButton"),
   resetDataButton: document.querySelector("#resetDataButton"),
   exportJsonButton: document.querySelector("#exportJsonButton"),
   exportCsvButton: document.querySelector("#exportCsvButton"),
@@ -259,6 +260,7 @@ function bindEvents() {
   });
   els.clearFiltersButton.addEventListener("click", clearFilters);
   els.addProjectButton.addEventListener("click", () => openProjectDialog());
+  els.resetStatusesButton.addEventListener("click", resetStatuses);
   els.resetDataButton.addEventListener("click", resetSeedData);
   els.exportJsonButton.addEventListener("click", exportJson);
   els.exportCsvButton.addEventListener("click", exportCsv);
@@ -335,6 +337,22 @@ async function resetSeedData() {
   if (!confirmed) return;
   state.projects = [...state.seedProjects];
   await persistProjects("Reset AI Fellows project data to seed workbook");
+}
+
+async function resetStatuses() {
+  const confirmed = window.confirm("Reset all project statuses to the original standardized workbook statuses?");
+  if (!confirmed) return;
+
+  const seedStatuses = new Map(
+    state.seedProjects.map((project) => [project.id, normalizeStatus(project.status)]),
+  );
+
+  state.projects = state.projects.map((project) => ({
+    ...project,
+    status: seedStatuses.get(project.id) || project.status,
+  }));
+
+  await persistProjects("Reset AI Fellows project statuses");
 }
 
 function render() {

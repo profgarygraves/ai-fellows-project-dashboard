@@ -7,8 +7,9 @@ A static, GitHub Pages-ready dashboard for tracking AI Fellows projects.
 - Sorts projects by recommended priority: status, next action date, priority, then name.
 - Uses a standard workflow: Idea, Planning, Experiment, Pilot, Active, Waiting, Blocked, Completed, Archived.
 - Filters by search, status, priority, category, and action date range.
-- Lets public visitors view and export the dashboard.
+- Lets public visitors view, filter, and print the dashboard.
 - Lets an authenticated editor add, edit, delete, and sync projects back to GitHub.
+- Lets an authenticated editor reset all statuses back to the standardized workbook baseline.
 - Exports all project data as JSON.
 - Exports the current filtered view as CSV for reports.
 - Prints the report view for date/status snapshots.
