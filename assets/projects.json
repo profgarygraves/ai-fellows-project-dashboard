@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-15T23:04:52.167Z",
+  "generatedAt": "2026-05-15T23:05:46.173Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -957,12 +957,12 @@
       "status": "Active",
       "priority": "High",
       "website": "https://profgarygraves.github.io/ccc-agentic-convening/",
-      "partners": "",
-      "nextStep": "",
-      "nextStepDate": "",
+      "partners": "Element451, CCC using E451",
+      "nextStep": "Meeting with Don & Hongling to make decisions now that we have a budget.",
+      "nextStepDate": "2026-05-18",
       "targetDate": "",
       "notes": "",
-      "sourceRow": 51
+      "sourceRow": ""
     },
     {
       "id": "aif-973b661da5",
