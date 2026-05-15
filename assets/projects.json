@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-15T23:05:46.173Z",
+  "generatedAt": "2026-05-15T23:07:18.481Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -1080,7 +1080,7 @@
     },
     {
       "id": "aif-1ac9868b74",
-      "name": "[merged] Play Lab 2025-2026",
+      "name": "Play Lab Train-Trainer 2025-2027",
       "category": "AI Infrastructure",
       "role": "AI Fellow Co-Lead (with Dominigue Wu and Hongling Yang)",
       "initiative": "Chancellor Priority",
@@ -1088,14 +1088,14 @@
       "description": "The PlayLab series prepares educators to design and deploy school-safe, purpose-built AI tools. It uses a train-the-trainer model to scale AI-driven practices across departments and student-support areas.",
       "goals": "Access, Success, Support",
       "status": "Active",
-      "priority": "Medium",
-      "website": "",
+      "priority": "Low",
+      "website": "https://www.playlab.ai",
       "partners": "",
-      "nextStep": "",
+      "nextStep": "Continue to build Chatbots and Train Faculty.",
       "nextStepDate": "",
-      "targetDate": "",
+      "targetDate": "2027-06-30",
       "notes": "Chancellor Priority",
-      "sourceRow": 58
+      "sourceRow": ""
     },
     {
       "id": "aif-1c62e9f09f",
