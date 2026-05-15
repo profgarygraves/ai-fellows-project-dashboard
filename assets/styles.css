@@ -274,6 +274,20 @@ button {
   gap: 10px;
 }
 
+.checkbox-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -2px 0 14px;
+  color: var(--ink);
+}
+
+.checkbox-control input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--teal);
+}
+
 label,
 .control-group label {
   color: var(--muted);

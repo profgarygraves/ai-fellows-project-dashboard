@@ -15,6 +15,7 @@ const STATUS_OPTIONS = [
 ];
 
 const PRIORITY_OPTIONS = ["High", "Medium", "Low"];
+const CLOSED_STATUSES = new Set(["Completed", "Archived"]);
 
 const STATUS_RANK = new Map([
   ["Active", 1],
@@ -44,6 +45,7 @@ const state = {
     category: "",
     fromDate: "",
     toDate: "",
+    includeClosed: false,
   },
   sortField: "recommended",
   sortDirection: "asc",
@@ -67,6 +69,7 @@ const els = {
   statusFilter: document.querySelector("#statusFilter"),
   priorityFilter: document.querySelector("#priorityFilter"),
   categoryFilter: document.querySelector("#categoryFilter"),
+  includeClosedInput: document.querySelector("#includeClosedInput"),
   fromDate: document.querySelector("#fromDate"),
   toDate: document.querySelector("#toDate"),
   sortField: document.querySelector("#sortField"),
@@ -248,6 +251,7 @@ function bindEvents() {
   on(els.statusFilter, "change", () => updateFilter("status", els.statusFilter.value));
   on(els.priorityFilter, "change", () => updateFilter("priority", els.priorityFilter.value));
   on(els.categoryFilter, "change", () => updateFilter("category", els.categoryFilter.value));
+  on(els.includeClosedInput, "change", () => updateFilter("includeClosed", els.includeClosedInput.checked));
   on(els.fromDate, "change", () => updateFilter("fromDate", els.fromDate.value));
   on(els.toDate, "change", () => updateFilter("toDate", els.toDate.value));
   on(els.sortField, "change", () => {
@@ -326,11 +330,13 @@ function clearFilters() {
     category: "",
     fromDate: "",
     toDate: "",
+    includeClosed: false,
   };
   els.searchInput.value = "";
   els.statusFilter.value = "";
   els.priorityFilter.value = "";
   els.categoryFilter.value = "";
+  els.includeClosedInput.checked = false;
   els.fromDate.value = "";
   els.toDate.value = "";
   render();
@@ -509,6 +515,7 @@ function getFilteredProjects() {
 
   return state.projects
     .filter((project) => {
+      if (!state.filters.includeClosed && CLOSED_STATUSES.has(project.status)) return false;
       if (state.filters.status && project.status !== state.filters.status) return false;
       if (state.filters.priority && project.priority !== state.filters.priority) return false;
       if (state.filters.category && project.category !== state.filters.category) return false;
