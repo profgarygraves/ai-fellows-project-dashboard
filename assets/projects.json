@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-16T15:52:37.727Z",
+  "generatedAt": "2026-05-16T15:53:56.434Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -206,22 +206,22 @@
     },
     {
       "id": "aif-7576889776",
-      "name": "AI Entrepreneurship Summer Camp",
+      "name": "AI Summer Camp",
       "category": "Conference & Training",
       "role": "Contributor",
       "initiative": "AI Fellows",
       "connection": "",
       "description": "Make-School-style summer experience where student teams build AI-enabled business prototypes and present them during a demo day.",
       "goals": "Success, Support",
-      "status": "Idea",
+      "status": "Waiting",
       "priority": "Medium",
       "website": "",
       "partners": "",
-      "nextStep": "",
+      "nextStep": "Waiting to be included in San Luis Obispo AWS summer camp",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "sourceRow": 10
+      "sourceRow": ""
     },
     {
       "id": "aif-857575a3cf",
