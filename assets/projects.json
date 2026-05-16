@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-16T14:39:31.825Z",
+  "generatedAt": "2026-05-16T15:52:37.727Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -14,6 +14,25 @@
     "Archived"
   ],
   "projects": [
+    {
+      "id": "dee4b0ea-bfea-4e58-8fed-9a3072aa2aaf",
+      "name": "Digital Workbooks or WEbsites from CANVAS Files",
+      "category": "AI Tools & Platforms",
+      "role": "Lead",
+      "initiative": "AI Fellows",
+      "connection": "",
+      "description": "Using .imscc CANVAS files, but a digital workbook or interactive website.",
+      "goals": "",
+      "status": "Idea",
+      "priority": "Low",
+      "website": "",
+      "partners": "",
+      "nextStep": "Test it.",
+      "nextStepDate": "2026-06-30",
+      "targetDate": "",
+      "notes": "",
+      "sourceRow": ""
+    },
     {
       "id": "b0b7fd1f-6775-4450-9fb0-93931ff20953",
       "name": "CA CC Curriculum Equity Revision Coach",
