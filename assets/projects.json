@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-16T15:53:56.434Z",
+  "generatedAt": "2026-05-20T13:42:59.292Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -14,6 +14,25 @@
     "Archived"
   ],
   "projects": [
+    {
+      "id": "1038a293-8d2d-4924-bd4d-41de338bf2c6",
+      "name": "Taxonomy of SKILLS to match TOP/CIP-Job Listings-Courses",
+      "category": "",
+      "role": "Lead",
+      "initiative": "AI Fellows",
+      "connection": "",
+      "description": "There is no documented format for SKILL LEARNED in courses or a way to match skills.  There is a mismatch of terminology from the JOb Market to education.  Perhaps AI can help bridge the skill earned in a course from Objectives, SLOs, courses content to help a student build a better Portfolio for match CPL and to demostrate skills learned to employers.",
+      "goals": "",
+      "status": "Idea",
+      "priority": "Medium",
+      "website": "",
+      "partners": "",
+      "nextStep": "",
+      "nextStepDate": "",
+      "targetDate": "2026-12-31",
+      "notes": "",
+      "sourceRow": ""
+    },
     {
       "id": "dee4b0ea-bfea-4e58-8fed-9a3072aa2aaf",
       "name": "Digital Workbooks or WEbsites from CANVAS Files",
