@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-20T18:36:45.593Z",
+  "generatedAt": "2026-05-20T18:37:57.107Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -1051,10 +1051,10 @@
       "goals": "Support, Success",
       "status": "Active",
       "priority": "Medium",
-      "website": "",
+      "website": "https://gamma.app/docs/Microsoft-Copilot-for-Education-ni2rznu8d5gmdxb",
       "partners": "",
-      "nextStep": "Attend MS trainings with NAAIC to reuse MS training materials",
-      "nextStepDate": "2026-05-15",
+      "nextStep": "Add FACULTY Use Examples\nAdd STAFF Use Examples",
+      "nextStepDate": "2026-06-30",
       "targetDate": "",
       "notes": "What most don't understand is that Co-Pilot is FERPA-compliant, already exists in your Microsoft products, and is available as a downloadable M365 app for devices.  Revising, creating awareness, and using this AI tool.",
       "sourceRow": ""
