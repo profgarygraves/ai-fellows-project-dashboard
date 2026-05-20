@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-20T18:37:57.107Z",
+  "generatedAt": "2026-05-20T18:42:04.594Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -1165,13 +1165,13 @@
       "goals": "Access, Success, Support",
       "status": "Active",
       "priority": "Medium",
-      "website": "",
+      "website": "https://profgarygraves.github.io/agentic-ai-demo-project/",
       "partners": "",
-      "nextStep": "",
-      "nextStepDate": "",
+      "nextStep": "Contact ALL E451 Colleges to start engagement.",
+      "nextStepDate": "2026-06-30",
       "targetDate": "",
       "notes": "Chancellor Priority",
-      "sourceRow": 59
+      "sourceRow": ""
     }
   ]
 }
