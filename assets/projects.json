@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-20T18:44:13.881Z",
+  "generatedAt": "2026-05-20T18:46:45.818Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -956,13 +956,13 @@
       "goals": "Support, Success",
       "status": "Waiting",
       "priority": "Low",
-      "website": "",
+      "website": "https://ai.asu.edu/ai-summit",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "sourceRow": 47
+      "sourceRow": ""
     },
     {
       "id": "aif-3ac4a194e7",
