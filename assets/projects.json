@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-20T13:42:59.292Z",
+  "generatedAt": "2026-05-20T18:36:45.593Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -458,9 +458,9 @@
       "role": "Lead",
       "initiative": "Apprenticeship",
       "connection": "WEDD",
-      "description": "Applied for California Apprenticeship Initiative (CAI) Grant to fund a NEW apprenticeship program around BUsiness Information Workers - AI Consultants with FC as the employer and trainer.",
+      "description": "Applied for California Apprenticeship Initiative (CAI) Grant to fund a NEW apprenticeship program around Business Information Workers - AI Consultants with FC as the employer and trainer.\nUDPATE: GRANT WAS DENIED.  Most likely due to the fact that AI jobs/Apprenticeships aren't recognized yet.",
       "goals": "Access, Success",
-      "status": "Waiting",
+      "status": "Archived",
       "priority": "Low",
       "website": "",
       "partners": "CCCCO CAI",
@@ -468,7 +468,7 @@
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "sourceRow": 22
+      "sourceRow": ""
     },
     {
       "id": "aif-bec80084f2",
