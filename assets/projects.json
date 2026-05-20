@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-20T18:42:04.594Z",
+  "generatedAt": "2026-05-20T18:44:13.881Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -14,6 +14,25 @@
     "Archived"
   ],
   "projects": [
+    {
+      "id": "a53601fe-8581-48b0-8df7-8c6982515675",
+      "name": "IBM Skillsbuild",
+      "category": "Workforce & Curriculum",
+      "role": "Lead",
+      "initiative": "AI Fellows",
+      "connection": "",
+      "description": "",
+      "goals": "",
+      "status": "Planning",
+      "priority": "Medium",
+      "website": "https://skills.yourlearning.ibm.com/",
+      "partners": "",
+      "nextStep": "Gain access to offer SKILLS BUILD to college community, local small businesses and students.",
+      "nextStepDate": "2026-06-30",
+      "targetDate": "",
+      "notes": "",
+      "sourceRow": ""
+    },
     {
       "id": "1038a293-8d2d-4924-bd4d-41de338bf2c6",
       "name": "Taxonomy of SKILLS to match TOP/CIP-Job Listings-Courses",
