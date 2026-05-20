@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-20T18:46:45.818Z",
+  "generatedAt": "2026-05-20T18:47:04.748Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -937,13 +937,13 @@
       "goals": "Support, Success",
       "status": "Waiting",
       "priority": "Low",
-      "website": "",
+      "website": "https://californiacommunitycolleges.cventevents.com/event/FuturesSummit2026/home",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "sourceRow": 46
+      "sourceRow": ""
     },
     {
       "id": "aif-f1c8b7eab3",
