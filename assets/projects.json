@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "AI Fellows Project Dashboard",
-  "generatedAt": "2026-05-20T18:47:04.748Z",
+  "generatedAt": "2026-05-20T18:48:02.020Z",
   "statusWorkflow": [
     "Idea",
     "Planning",
@@ -918,13 +918,13 @@
       "goals": "Support, Success",
       "status": "Waiting",
       "priority": "Low",
-      "website": "",
+      "website": "https://www.naaic.ai/events/national-ai-summit",
       "partners": "",
       "nextStep": "",
       "nextStepDate": "",
       "targetDate": "",
       "notes": "",
-      "sourceRow": 45
+      "sourceRow": ""
     },
     {
       "id": "aif-b6316326a4",
